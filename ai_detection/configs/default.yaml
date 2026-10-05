@@ -1,0 +1,29 @@
+# default.yaml — centralised hyperparameters for the CNN-BiLSTM IDS
+# These values match the validated production run (bilstm_ids_v2.pt, macro-F1 0.7711)
+
+training:
+  batch_size: 2048
+  epochs: 30
+  lr: 1.5e-3
+  weight_decay: 2.0e-5
+  hidden: 128
+  lstm_layers: 2
+  cnn_ch: 128
+  n_heads: 4
+  dropout: 0.30
+  chunk: 4              # feature vector is reshaped to (T = pad_to/chunk, chunk)
+  focal_gamma: 2.0
+  la_tau: 1.0           # natural-prior logit-adjustment strength at inference
+  ema_decay: 0.999
+  patience: 8
+  seed: 42
+
+  # Rebalancing — Option B (DO NOT stack all three)
+  smote_floor: 3000     # SMOTE floor for rare classes only
+  use_sampler: false    # WeightedRandomSampler — keep false while focal + SMOTE active
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  models: models
+  outputs: outputs

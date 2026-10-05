@@ -1,0 +1,32 @@
+{
+  "merged_class_names": [
+    "Benign",
+    "Botnet",
+    "DDoS-HOIC",
+    "DDoS-LOIC-HTTP",
+    "DDoS-LOIC-UDP",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-BruteForce",
+    "Infiltration",
+    "SSH-BruteForce",
+    "WebAttack"
+  ],
+  "log_pi_train": [
+    -1.263794,
+    -2.275357,
+    -1.956941,
+    -1.956941,
+    -6.707137,
+    -3.531839,
+    -1.956941,
+    -9.488851,
+    -4.961858,
+    -9.616684,
+    -2.45235,
+    -2.711174,
+    -7.378233
+  ]
+}

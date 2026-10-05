@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+tf-gpu/
+
+# Secrets / local config
+.env
+.env.*
+
+# Raw dataset (16 GB, see data/README.md for download instructions)
+*.csv
+
+# Large training tensors (regenerate with ai_detection/src/data_processing/preprocess.py)
+ai_detection/data/processed/X_*.npy
+ai_detection/data/processed/y_*.npy
+
+# Non-production checkpoints and training outputs
+ai_detection/models/bilstm_ids.pt
+ai_detection/models/bilstm_ids_advanced.pt
+ai_detection/models/bilstm_ids_v3.pt
+ai_detection/outputs/
+
+# Dashboard runtime files
+dashboard/data/
+dashboard/spark/spark_checkpoint/
+*.log
+
+# Scala / sbt build output
+big_data_spark/target/
+big_data_spark/project/target/
+big_data_spark/project/project/
+big_data_spark/output/
+
+# IDE / OS / tools
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/
